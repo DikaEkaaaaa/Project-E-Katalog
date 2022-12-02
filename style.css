@@ -1,0 +1,43 @@
+.img-thumbnail {
+  height: 250px;
+  width: 250px;
+  border-radius: 150px;
+}
+
+.main-logo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text-start {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#projects {
+  background-color: #47B5FF;
+}
+
+section {
+  padding-top: 2rem
+}
+
+.main-logo {
+  background-color: #256D85;
+}
+
+/* .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border-color: black;
+} */
+
+.navbar-brand {
+  color: white;
+}
+
+.offcanvas-title {
+  color: white;
+}
