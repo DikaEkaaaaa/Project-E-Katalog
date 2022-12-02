@@ -1,0 +1,11 @@
+{
+  "name": "E-Katalog",
+  "version": "1.0.0",
+  "description": "Project E-Katalog SMKN 2 Salatiga Informatic Engineering",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
