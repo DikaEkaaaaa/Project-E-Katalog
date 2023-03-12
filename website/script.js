@@ -7,7 +7,7 @@ btnExplore.addEventListener('click', e => {
         })
 })
 
-let navLinks = document.querySelectorAll('.nav-link');
+let navLinks = document.querySelectorAll('');
 
 for (let i in navLinks) {
     if (navLinks.hasOwnProperty(i)) {

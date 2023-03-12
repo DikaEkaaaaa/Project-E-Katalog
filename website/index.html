@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
 </head>
 
 <body class="dark bg-slate-100">
-  <!-- * Navbar Start -->
+  <!-- ! Navbar Start -->
 
-  <nav class="fixed w-[100%] bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+  <!-- <nav class="fixed w-[100%] bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="https://flowbite.com/" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
@@ -53,9 +53,33 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
-  <!-- * Navbar  End-->
+  <!-- ! Navbar  End-->
+
+  <!-- * Navbar Start -->
+  <div class="fixed navbar bg-gray-900">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">INF EGN</a>
+    </div>
+    <div class="flex-none">
+      <!-- ? Desktop -->
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="menu-item" data-href="home" href="#home">Home</a></li>
+        <li><a class="menu-item" data-href="more" href="#more">About Us</a></li>
+        <li><a class="menu-item" data-href="credit" href="#credit">About Us</a></li>
+      </ul>
+
+      <!-- ? Mobile Button burger -->
+      <button class="btn btn-square btn-ghost md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          class="inline-block w-5 h-5 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- * Navbar End -->
 
   <!-- * Body -->
   <div>
@@ -84,7 +108,7 @@
       <h1 class="mb-4 text-5xl text-center font-extrabold tracking-tight leading-none text-gray-700">
         Informatic B 22/22
       </h1>
-      <div class="flex pt-20 justify-center items-center">
+      <div class="flex pt-20 text-gray-600 justify-center items-center">
         <div class="max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl">
           <div class="p-4 flex flex-col md:gap-0 gap-10 md:flex-row justify-between">
             <div class="w-[100%] flex justify-center md:justify-start">
@@ -152,83 +176,91 @@
 
 
     <!-- ? Section 3 -->
-    <div id='credit' class="section pt-20 pb-20 p-2">
+    <div id='credit' class="section text-gray-600 pt-20 pb-20 p-2">
       <h1 class="text-center text-4xl font-extrabold mb-20 mt-10">Credit Dev</h1>
       <div class="flex justify-center items-center">
-        <div class="flex flex-col md:flex-row max-w-5xl gap-6">
-          <div class="rounded-md bg-white p-6">
-            <div class="text-center">
-              <h1 class="text-xl font-extrabold text-gray-800">DikaEka</h1>
-              <p class="text-gray-500">Developer</p>
-              <p class="text-gray-900 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ea
-                voluptates, voluptas ad natus inventore nisi, beatae saepe, nesciunt sed sequi est nobis animi at
-                explicabo aperiam veniam? Hic harum saepe dignissimos omnis? Dolorem quos quis odit cum dignissimos aut?
-              </p>
+        <div class="flex flex-col md:flex-row max-w-5xl p-6 gap-6">
+
+          <div class="card bg-white shadow">
+            <div class="card-body text-center items-center">
+              <h1 class="card-title">Dika Eka</h1>
+              <div class="badge bg-indigo-400 rounded-lg border-none text-gray-100 shadow-lg font-bold text-xs">
+                Developer</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ea voluptates, voluptas ad natus
+                inventore nisi, beatae saepe, nesciunt sed sequi est nobis animi at explicabo aperiam veniam? Hic harum
+                saepe dignissimos omnis? Dolorem quos quis odit cum dignissimos aut?</p>
             </div>
-            <div class="flex justify-center items-center gap-4 mt-6">
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24">
-                  <a href="https://github.com/DikaEkaaaaa">
+            <div class="card-action mb-6">
+              <div class="flex items-center gap-4 justify-center">
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <a href="https://github.com/DikaEkaaaaa">
+                      <path fill="currentColor"
+                        d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                    </a>
+                  </svg>
+                </div>
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                     <path fill="currentColor"
-                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
-                  </a>
-                </svg>
-              </div>
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                    d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599c.28.28.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598a2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233c0-2.136.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92c.28-.28.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z" />
-                </svg>
-              </div>
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
+                      d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599c.28.28.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598a2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233c0-2.136.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92c.28-.28.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z" />
+                  </svg>
+                </div>
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="rounded-md bg-white p-6">
-            <div class="text-center">
-              <h1 class="text-xl font-extrabold text-gray-800">Jeremy</h1>
-              <p class="text-gray-500">Helper</p>
-              <p class="text-gray-900 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ea
-                voluptates, voluptas ad natus inventore nisi, beatae saepe, nesciunt sed sequi est nobis animi at
-                explicabo aperiam veniam? Hic harum saepe dignissimos omnis? Dolorem quos quis odit cum dignissimos aut?
-              </p>
+          <div class="card bg-white shadow">
+            <div class="card-body text-center items-center">
+              <h1 class="card-title">Jeremy</h1>
+              <div class="badge bg-green-400 rounded-lg border-none text-gray-100 shadow-lg font-bold text-xs">Helper
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ea voluptates, voluptas ad natus
+                inventore nisi, beatae saepe, nesciunt sed sequi est nobis animi at explicabo aperiam veniam? Hic harum
+                saepe dignissimos omnis? Dolorem quos quis odit cum dignissimos aut?</p>
             </div>
-            <div class="flex justify-center items-center gap-4 mt-6">
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24">
-                  <a href="https://github.com/jeremy777">
+            <div class="card-action mb-6">
+              <div class="flex items-center gap-4 justify-center">
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <a href="https://github.com/jeremy776">
+                      <path fill="currentColor"
+                        d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                    </a>
+                  </svg>
+                </div>
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                     <path fill="currentColor"
-                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
-                  </a>
-                </svg>
-              </div>
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 16 16">
-                  <path fill="currentColor"
-                    d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599c.28.28.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598a2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233c0-2.136.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92c.28-.28.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z" />
-                </svg>
-              </div>
-              <div class="bg-slate-50 rounded-full p-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
+                      d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599c.28.28.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598a2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233c0-2.136.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92c.28-.28.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z" />
+                  </svg>
+                </div>
+                <div class="bg-slate-50 rounded-full p-3">
+                  <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
+
+
+
         </div>
       </div>
     </div>
