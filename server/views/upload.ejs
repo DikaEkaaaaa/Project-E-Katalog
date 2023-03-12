@@ -38,7 +38,8 @@
             body: JSON.stringify({
                 foto,
                 nama,
-                quote
+                quote,
+                '_csrf': '<%= csrfToken %>'
             }),
             headers: {
                 "Content-type": "application/json"
