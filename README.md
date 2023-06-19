@@ -3,15 +3,15 @@ Project E-Katalog SMKN 2 Salatiga Informatic Engineering
 
 # Setting Up web
 ```bash
-$ Project-E-Katalog\server> yarn install
+$ Project-E-Katalog\server> npm install
 ```
 Running on development:
 ```bash
-$ Project-E-Katalog\server> yarn dev
+$ Project-E-Katalog\server> npm run dev
 ```
 Running on production:
 ```bash
-$ Project-E-Katalog\server> yarn start
+$ Project-E-Katalog\server> npm run start
 ```
 
 ---
