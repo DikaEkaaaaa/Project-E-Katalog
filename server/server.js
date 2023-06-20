@@ -24,6 +24,7 @@ let url = bodyParser.urlencoded({
 });
 
 /**
+ * ! deprecated - will be removed in the future
  * @description - Live reload
  */
 // const liveReloadServer = livereload.createServer();
@@ -77,9 +78,11 @@ app.get("/", async (req, res) => {
  * @returns {object} - Rendered view
  */
 app.get("/list", async (req, res) => {
+  // ! will use API soon
   let data = await SiswaManager.find({});
+
   res.render("list", {
-    data,
+    data
   });
 });
 

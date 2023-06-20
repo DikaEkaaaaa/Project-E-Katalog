@@ -3,7 +3,10 @@ import { model, Mongoose, Schema } from "mongoose";
 const SiswaSchema = new Schema({
     nama: String,
     quote: String,
-    foto: Schema.Types.ObjectId,
+    foto: {
+        type: Schema.Types.ObjectId,
+        ref: 'FotoSiswa'
+    },
     id: Number
 });
 
