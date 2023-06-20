@@ -59,6 +59,7 @@ app.use(express.json({ limit: "10mb" }));
  * @description - Import router for middleware
  */
 import adminRouter from "./routes/admin.js";
+import apiRouter from "./routes/api.js";
 
 /**
  * @param {object} csrfProtection - CSRF Protection
@@ -66,6 +67,7 @@ import adminRouter from "./routes/admin.js";
  * @returns {object} - Router
  */
 app.use("/admin", adminRouter(csrfProtection, url));
+app.use("/api", apiRouter(csrfProtection, url));
 
 app.get("/", async (req, res) => {
   res.render("index");

@@ -60,25 +60,6 @@ const AdminRouter = (csrfProtection, url) => {
       });
       return;
     });
-
-    // let time = Date.now();
-    // console.log('Mengupload data...')
-    // let data = new SiswaManager({
-    //   nama,
-    //   foto,
-    //   quote,
-    //   id: allData.length + 1,
-    // });
-    // data.save().then((doc) => {
-    //   console.log(
-    //     `Data ${doc.nama} berhasil ditambahkan dalam ${Date.now() - time}ms`
-    //   );
-    //   res.status(200).send({
-    //     status: 200,
-    //     message: "Data berhasil ditambahkan",
-    //   });
-    //   return;
-    // });
   });
 
   return router;
