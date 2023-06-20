@@ -15,6 +15,50 @@ const AdminRouter = (csrfProtection, url) => {
   });
 
   /**
+   * @method GET
+   * @route /admin/daftar-siswa
+   * @description - Menampilkan daftar siswa
+   */
+  router.get("/daftar-siswa", csrfProtection, async (req, res) => {
+    let data = await SiswaManager.find({});
+
+    res.render("admin/daftar-siswa", {
+      data,
+      csrfToken: req.csrfToken(),
+    });
+  });
+
+  /**
+   * @method DELETE
+   * @route /admin/daftar-siswa
+   * @description - Menghapus data siswa dari database
+   * @param {string} id - ID siswa
+   */
+  router.delete("/daftar-siswa", csrfProtection, url, async (req, res) => {
+    const { id } = req.body;
+
+    let data = await SiswaManager.findOne({ id });
+    if (!data) {
+      res.send({
+        error: 404,
+        message: "Siswa tidak ditemukan",
+      });
+      return;
+    }
+
+    await FotoSiswaModel.deleteOne({ _id: data.foto });
+
+    await SiswaManager.deleteOne({ id })
+    .then((doc) => {
+      res.send({
+        status: 200,
+        message: "Data berhasil dihapus",
+      });
+      return;
+    });
+  });
+
+  /**
    * @method POST
    * @route /admin/upload-data
    * @description - Menambahkan data siswa ke database

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Daftar Siswa</title>
+  <style>
+    * {
+      background-color: blue;
+      color: white;
+      font-family: monospace;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #fff;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:hover>td {
+      background-color: #6372f5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Daftar Siswa</h1>
+  <table>
+    <tr>
+      <th>Avatar ID</th>
+      <th>Nama</th>
+      <th>Absen ke</th>
+      <th>Quote</th>
+      <th>Action</th>
+    </tr>
+    <% data.forEach(function(item){ %>
+      <tr>
+        <td><img width="50" src="http://localhost:3000/api/siswa/foto/<%- item.foto %>" /></td>
+        <td><%- item.nama %></td>
+        <td><%- item.id %></td>
+        <td><%- item.quote %></td>
+        <td>
+          <button>Edit</button>
+          <button id="delete-<%-item.id%>" onclick="hapusData('<%- item.id %>')">Hapus</button>
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+  <br>
+  <button onclick="window.location.href = '/admin/upload-data'">Tambah siswa</button>
+
+</body>
+<script>
+  function hapusData(id) {
+    let button = document.getElementById(`delete-${id}`);
+    button.innerHTML = "Loading...";
+    button.disabled = true;
+    console.log(`%cPenghapusan data ${id} sedang diproses`, "color:yellow; font-size: 20px; font-weight: bold;");
+
+    fetch('/admin/daftar-siswa', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: id,
+        '_csrf': '<%= csrfToken %>'
+      })
+    }).then(res => res.json())
+      .then(res => {
+        // console.log(res);
+        if (res.status == 200) {
+          button.innerHTML = "Hapus";
+          button.disabled = false;
+          console.log(`%cPenghapusan data ${id} telah berhasil`, "color:green; font-size: 20px; font-weight: bold;");
+          
+          window.location.reload();
+        } else {
+          button.innerHTML = "Hapus";
+          button.disabled = false;
+          console.log(`%cPenghapusan data ${id} gagal`, "color:green; font-size: 20px; font-weight: bold;");
+          console.log(res)
+        }
+      });
+  }
+</script>
+
+</html>
