@@ -1,7 +1,10 @@
 # Project-E-Katalog
 Project E-Katalog SMKN 2 Salatiga Informatic Engineering
 
-# Setting Up web
+## Setting Up web
+```bash
+$ Project-E-Katalog> cd server
+```
 ```bash
 $ Project-E-Katalog\server> npm install
 ```
@@ -12,6 +15,15 @@ $ Project-E-Katalog\server> npm run dev
 Running on production:
 ```bash
 $ Project-E-Katalog\server> npm run start
+```
+
+## Path to web
+```bash
+[Beranda] - /
+
+# Admin
+[Tambah Siswa] - /admin/upload-data
+[Daftar Siswa] - /admin/daftar-siswa
 ```
 
 ---

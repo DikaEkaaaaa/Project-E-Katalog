@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Data Siswa</title>
+</head>
+
+<body>
+    <div>
+        <h1>Masukan Data Siswa</h1>
+        <div>
+            <div>
+                <img src="" width="250" />
+                <input id="foto" onchange="imagePrivew()" name="foto" type="file" accept="image/*" />
+            </div>
+            <div>
+                <div>
+                    <input id="nama" name="nama" type="text" placeholder="Nama siswa" />
+                </div>
+                <div>
+                    <textarea id="quote" name="quote" placeholder="Quote"></textarea>
+                </div>
+                <div>
+                    <button id="submit">Submit data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    let button = document.getElementById('submit');
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    button.addEventListener('click', () => {
+        let nama = document.getElementById('nama').value;
+        let foto = document.querySelector('img').src;
+        let quote = document.getElementById('quote').value;
+
+        if (nama == "" || foto == "" || quote == "") {
+            Toast.fire({
+                icon: 'error',
+                title: 'Gagal ditambahkan',
+                text: "Data siswa tidak boleh kosong"
+            });
+            return;
+        }
+
+        button.innerHTML = "Loading...";
+        button.disabled = true;
+
+        fetch('/admin/upload-data', {
+            method: "POST",
+            body: JSON.stringify({
+                foto,
+                nama,
+                quote,
+                '_csrf': '<%= csrfToken %>'
+            }),
+            headers: {
+                "Content-type": "application/json"
+            }
+        }).then(r => r.json()).then(r => {
+            button.innerHTML = "Submit data";
+            button.disabled = false;
+            if (r.status == 200) {
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Data siswa berhasil ditambahkan'
+                });
+                return;
+            }
+            Toast.fire({
+                icon: 'error',
+                title: 'Data siswa gagal ditambahkan',
+                text: r.message
+            });
+        })
+    });
+
+    function imagePrivew() {
+        let preview = document.querySelector('img');
+        let file = document.querySelector('input[type=file]').files[0];
+        let reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+        if (file) {
+            reader.readAsDataURL(file)
+        } else {
+            preview.src = preview.src;
+        }
+    }
+</script>
+
+</html>

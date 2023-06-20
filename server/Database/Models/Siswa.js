@@ -1,9 +1,9 @@
-import { model, Schema } from "mongoose";
+import { model, Mongoose, Schema } from "mongoose";
 
 const SiswaSchema = new Schema({
     nama: String,
-    foto: String,
     quote: String,
+    foto: Schema.Types.ObjectId,
     id: Number
 });
 
