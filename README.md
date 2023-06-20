@@ -24,6 +24,9 @@ $ Project-E-Katalog\server> npm run start
 # Admin
 [Tambah Siswa] - /admin/upload-data
 [Daftar Siswa] - /admin/daftar-siswa
+
+# Api
+[Lihat foto] - /api/foto/[id]
 ```
 
 ---
