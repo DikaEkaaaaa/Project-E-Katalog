@@ -27,6 +27,9 @@ $ Project-E-Katalog\server> npm run start
 ```
 
 ---
+TOOLS
+1. node.js
+2. Visual Studio Code
 
 RECOMENDED EXTENSIONS (Project Manager Only)
 1. Prettier
