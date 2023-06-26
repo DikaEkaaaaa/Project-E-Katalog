@@ -5,6 +5,8 @@ import mongoose from "mongoose";
 import SiswaManager from "./Database/Models/Siswa.js";
 import connectLivereload from "connect-livereload";
 import livereload from "livereload";
+import guruData from "./list-guru.js"
+// const guruData = require("./list-guru.json")
 
 // cookie
 import cookieParser from "cookie-parser";
@@ -70,7 +72,9 @@ app.use("/admin", adminRouter(csrfProtection, url));
 app.use("/api", apiRouter(csrfProtection, url));
 
 app.get("/", async (req, res) => {
-  res.render("index");
+  res.render("index", {
+    guruData
+  });
 });
 
 /**
