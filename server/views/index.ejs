@@ -45,31 +45,211 @@
   </section>
 
   <!-- Name This Section-->
-  <section class="relative bg-white flex pt-10 pb-20 justify-center items-center text-center">
+  <section class="relative flex pt-10 justify-center items-center text-center">
     <div class="w-full relative">
       <div class="text-center justify-center font-bold">
         <h2 class="text-3xl">MEET THE</h2>
         <p class="text-6xl">TEACHER</p>
       </div>
-          <div class="flex flex-wrap justify-center items-center w-full top-9 mt-20">
-            <%for(let i = 0; i < guruData.length; i++) {%>
-              <!-- <%-guruData[i].foto%> -->
-              <div class="border border-gray-500 my-9 mx-9 w-[165px]">
-                <div class="h-[215px]">
-              <img src="<%- guruData[i].foto %>" class="w-full h-full"/>
+      <div class="bg-gray-200 pb-20 pt-20">
+        <div class="flex justify-center items-center w-full top-9">
+          <!-- <div class=""> -->
+          <div class="max-w-5xl scrollbar-guru overflow-x-scroll grid grid-flow-col auto-cols-max pb-10 gap-[80px]">
+
+            <% for(let i=0;i<guruData.length;i++){ %>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="<%- guruData[i].foto %>" class="w-full h-full" />
                 </div>
-              <p class=""><%- guruData[i].jabatan %></p>
-              <h6><%- guruData[i].nama %></h6>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-xs mb-4"><%- guruData[i].nama %></h6>
               </div>
-              <%}%>
+              <% } %>
+
+
           </div>
+        </div>
+        <h6 class="text-xl mt-20 font-semibold">"Terima kasih atas segala jasa-jasamu Pak/Bu."</h6>
       </div>
+    </div>
     <!-- Jer tolong kotaknya di susun di tengah ya-->
     <!-- done bang -->
   </section>
   <!-- Name This End Section-->
 
+
+  <!-- Name this section -->
+  <section class="relative flex pt-60 justify-center items-center text-center">
+    <div class="w-full relative">
+      <div class="text-center justify-center font-bold">
+        <h2 class="text-3xl">MEET US!</h2>
+        <p class="text-6xl">THE CHAMPIONS</p>
+      </div>
+      <div class="bg-gray-200 pb-20 pt-20">
+        <div class="flex justify-center items-center w-full top-9">
+          <div class="max-w-7xl ">
+
+            <div class="flex justify-between mb-10">
+              <h6>left</h6>
+              <h6>Page 1 of 3</h6>
+              <h6>right</h6>
+            </div>
+            <div class="grid grid-cols-5 gap-10 justify-between">
+
+
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+              <div
+                class="before:border before:absolute before:border-gray-900 before:w-full before:h-full before:left-2 before:top-1 relative bg-white block w-[155px]">
+                <div class="h-[200px]">
+                  <img src="server\public\imgs\Bu Nafa.jpg" class="w-full h-full" />
+                </div>
+                <p class="italic text-sm mt-4">Guru Mapel</p>
+                <h6 class="font-semibold text-sm mb-4">Taslimatul A.F, M.Ko</h6>
+              </div>
+
+            </div>
+            <div class="flex justify-between mt-10">
+              <h6>left</h6>
+              <h6>Page 1 of 3</h6>
+              <h6>right</h6>
+            </div>
+          </div>
+        </div>
+
+        <h6 class="text-xl mt-20 font-semibold">"We're stronger when we become one."</h6>
+      </div>
+    </div>
+  </section>
+  <!-- Name this end section -->
+
+  <!-- Our moments section -->
+  <section class="relative pt-60 justify-center">
+    <div class="w-full relative">
+      <div class="text-center justify-center font-bold">
+        <h2 class="text-3xl">TKJ B SPECIAL</h2>
+        <p class="text-6xl">OUR MOMENTS</p>
+      </div>
+      <div class="bg-sky-900 mt-10 py-4 px-0">
+
+      </div>
+    </div>
+  </section>
+  <!-- End moments section -->
+
 </body>
+
 <style>
   .bg-dots {
     background-image: radial-gradient(#bebdbd 20%, white 20%);
@@ -78,8 +258,27 @@
     background-position: 0 0;
     background-size: 10px 10px;
   }
+
   .title-text {
     text-shadow: 1px -2px 0px rgb(152, 211, 238), 1px 2px 0px #7289da;
+  }
+
+  .scrollbar-guru::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .scrollbar-guru::-webkit-scrollbar {
+    height: 7px !important;
+  }
+
+  .scrollbar-guru::-webkit-scrollbar-thumb {
+    background: #373039;
+    border-radius: 10px;
+  }
+
+  .scrollbar-guru::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 </style>
 
