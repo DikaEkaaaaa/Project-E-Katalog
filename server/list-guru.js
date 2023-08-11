@@ -26,17 +26,17 @@ const data = [{
 {
     "nama" : "Nur Linda Achmad, S.Pd. Kom",
     "jabatan" : "Guru Mapel",
-    "foto" : "pa linda.jpg"
+    "foto" : "/imgs/pa linda.jpg"
 },
 {
     "nama" : "Sri Wahyudi, S.Pd., M.Pd.",
     "jabatan" : "Guru Mapel",
-    "foto" : "pa sri"
+    "foto" : "/imgs/pa sri.jpg"
 },
 {
     "nama" : "Arif Basuki Wibowo, S.Pd",
     "jabatan" : "Guru Mapel",
-    "foto" : "pa arif.jpg"
+    "foto" : "/imgs/pak arif.jpg"
 }]
 
 export default data;
